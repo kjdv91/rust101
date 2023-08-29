@@ -28,6 +28,7 @@ pub fn main() -> Result<(), String>{
         i = (i + 1) % 255;
         canvas.set_draw_color(Color::RGB(i, 64, 255 - i));
         canvas.clear();
+        
         for event in event_pump.poll_iter() {
             match event {
                 Event::Quit {..} |
